@@ -1,0 +1,41 @@
+label {
+    color: #fff
+}
+
+
+
+li a {
+    color: #fff !important;
+}
+
+li a:hover {
+    color: #4285F4 !important;
+}
+.pagination .page-item .page-link {
+    /* color: #212529; */
+    background-color: #273144;
+}
+
+.dataTables_info {
+    color: #fff !important
+}
+
+
+/* Header title */
+
+.c_heading {
+    padding: 0;
+    margin-top: 5rem;
+    margin-bottom: -1rem;
+}
+.heading-global {
+    border: 1px solid #3d3d3e;
+    padding: .7rem;
+    width: 50%;
+    background: #202e3c !important;
+    border-radius: 5px;
+}
+
+.i-global {
+    color: var(--secondary-bg-color);
+}

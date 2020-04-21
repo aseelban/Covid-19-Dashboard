@@ -1,0 +1,26 @@
+
+body {
+    background-color: #15202B;
+    height: 400rem;
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 15px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 15px;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 0;
+    background: #15202B
+    ; 
+}
+
+/* ! end : total cases based on cuntry */

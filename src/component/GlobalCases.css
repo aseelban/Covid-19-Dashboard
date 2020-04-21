@@ -1,0 +1,112 @@
+:root {
+    --dark-1-bg-color: #273144;
+    --dark-2-bg-color: #1C2331;
+    --secondary-bg-color: #3c63a5 ;
+    --info-color: #00b0ff;
+    --font-light-color: #d7d7d7;
+}
+
+
+
+/* ! start : total cases section */
+
+.card {
+    background-color: var(--dark-1-bg-color)
+    ;
+}
+
+.card-header {
+    background-color: var(--dark-2-bg-color) !important;
+    color: var(--font-light-color);
+
+}
+.card-title {
+    color: var(--font-light-color);
+
+}
+
+.confirmed-num {
+    color: var(--info-color);
+}
+
+.card-footer {
+    background-color: var(--dark-1-bg-color) !important;
+    color: var(--font-light-color);
+}
+
+.num-confirmed {
+    color: yellow
+}
+
+.num-recovered {
+    color: #43f743
+}
+
+.num-deaths {
+    color: #ff6565;
+}
+/* ! end : total cases section */
+
+
+/* ! start : total cases based on cuntry */
+
+.heading-global {
+    border: 1px solid #3d3d3e;
+    padding: .7rem;
+    width: 50%;
+    background: #202e3c !important;
+    border-radius: 5px;
+}
+
+.i-global {
+    color: var(--secondary-bg-color);
+}
+
+.search-box {
+    /* margin: 10px 0; */
+    /* background: var(--dark-2-bg-color); */
+    width: 88.1%;
+}
+.search-box #search-input {
+    background-color: #dedede;
+}
+.search-box .search-icon {
+    background: #acacad;
+    border: none;
+}
+
+table.table td {
+    color: #fff;
+}
+
+table.table th, table.table td {
+    color: #fff;
+}
+
+.list-global {
+    height: 30rem;overflow:auto;
+}
+
+.thead-heading {
+    background-color: var(--secondary-bg-color);
+}
+
+.c-recovered {
+    color: #43f743 !important;
+    font-weight: 600;
+}
+
+.c-deaths{
+    color: #ff1515 !important;
+    font-weight: 400;
+}
+
+.title {
+    color: #fff;
+    margin-right: 7px;
+    line-height: 2;
+}
+
+tr:nth-child(even) {
+    background-color: var(--dark-1-bg-color) !important;
+  }
