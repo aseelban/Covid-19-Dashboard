@@ -1,6 +1,6 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
-import { MDBCard,MDBCol, MDBCardBody, MDBCardTitle, MDBCardHeader, MDBCardFooter, MDBBtn, MDBContainer, MDBRow } from
+import { MDBCard,MDBCol, MDBCardBody, MDBCardHeader, MDBCardFooter, MDBContainer, MDBRow } from
 "mdbreact";
 import './GlobalCases.css';
 
@@ -14,7 +14,7 @@ return (
     {/* 
     //! Total Confirmed 
     */}    
-    <MDBCol sm="12" md="4">
+    <MDBCol className="d-flex justify-content-center" sm="12" md="4">
     <MDBCard style={{ width: "22rem", marginTop: "1rem" }} className="text-center">
     <MDBCardHeader>Confirmed</MDBCardHeader>
     <MDBCardBody>
@@ -33,7 +33,7 @@ return (
     {/* 
     //! Total Recovered 
     */}
-    <MDBCol sm="12" md="4">
+    <MDBCol className="d-flex justify-content-center" sm="12" md="4">
     <MDBCard style={{ width: "22rem", marginTop: "1rem" }} className="text-center">
     <MDBCardHeader>Recovered</MDBCardHeader>
     <MDBCardBody>
@@ -52,7 +52,7 @@ return (
     {/* 
     //! Total Deaths 
     */}
-    <MDBCol sm="12" md="4">
+    <MDBCol className="d-flex justify-content-center" sm="12" md="4">
     <MDBCard style={{ width: "22rem", marginTop: "1rem" }} className="text-center">
     <MDBCardHeader>Deaths</MDBCardHeader>
     <MDBCardBody>

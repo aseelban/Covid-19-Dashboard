@@ -1,0 +1,14 @@
+.title-chart {
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 30px 5px 10px;
+    background-color: #202E3C;
+    margin: 20px 0;
+    display: inline-block;
+    font-size: 20px;
+    
+}
+.title-chart i {
+    margin-right: 5px;
+    color: #3C63A5
+}

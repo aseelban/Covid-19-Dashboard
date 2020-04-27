@@ -6,8 +6,13 @@ import "mdbreact/dist/css/mdb.css";
 import "./index.css";
 import App from "./App";
 
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render( <App /> , document.getElementById('root'));
-
-registerServiceWorker();
+ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+  
+//registerServiceWorker();

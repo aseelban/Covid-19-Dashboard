@@ -1,16 +1,17 @@
 import React, { Component,Fragment } from 'react'
 import Header from './layout/Header'
+import Footer from './layout/Footer'
 import GlobalCases from './GlobalCases'
-import {countryObject} from './Countries'
-// import {countryObject} from './Countries'
 import axios from 'axios'
 import './Covid.css'
-import {MDBContainer,MDBRow,MDBCol} from 'mdbreact';
 import TabelGlobal from './TabelGlobal'
+import Chart from './Chart'
 
 
 const base_api_url = `https://api.covid19api.com/`;
 const log = console.log;
+
+
 
 
 
@@ -20,6 +21,7 @@ class Covid extends Component {
         this.state = { 
             global_cases : [],
             global_all_cases : [],
+            chartData: {}
          }
 
     }
@@ -48,24 +50,13 @@ class Covid extends Component {
         const url = `${base_api_url}summary`;
         let res = await axios.get(url);
         const data = res.data.Countries;
-        const elm = data.shift()
-        console.log(elm)
-
         try{
-            this.setState({
-                global_all_cases: data
-            })
-
+            this.setState({global_all_cases: data})  
         } catch(err){
             log(err)
         }
 
     } 
-
-    rmCountry = () => {
-        let filteredArray = this.state.global_all_cases.filter(item => item.length === 0)
-        this.setState({global_all_cases: filteredArray});
-    }
 
 
 
@@ -75,22 +66,15 @@ class Covid extends Component {
 
     async componentDidMount(){
         //* call current_global_cases
-        this.current_global_cases()
+        await this.current_global_cases()
         //* call current_all_global_cases
-        this.current_all_global_cases()
-        //* remove junk
-        this.rmCountry()
-
-        
-
+        await this.current_all_global_cases()
         
     }
 
 
 
     render() { 
-    
- 
         const {global_cases,global_all_cases} = this.state;
 
         return ( 
@@ -99,11 +83,12 @@ class Covid extends Component {
                 <Fragment>
                 <GlobalCases n_confirmed={global_cases.NewConfirmed} t_confirmed={global_cases.TotalConfirmed} n_deaths={global_cases.NewDeaths} t_deaths={global_cases.TotalDeaths} n_recovered={global_cases.NewRecovered} t_recovered={global_cases.TotalRecovered}/>
                 </Fragment>
-                <TabelGlobal g_data={global_all_cases}/>
-
+                <TabelGlobal globalData={global_all_cases}/>
+                <Chart mdata={this.state.global_all_cases}/>
+                <Footer />
             </div>
-         );
+        );
     }
 }
- 
+
 export default Covid;
