@@ -67,7 +67,7 @@ const TabelGlobal = (props) => {
     rows: get_data
     };
 
-       //* sort global state data
+      //  //* sort global state data
        data.sort((a,b) => {
         if(a.TotalConfirmed > b.TotalConfirmed){
           return 1
@@ -86,7 +86,6 @@ const TabelGlobal = (props) => {
         striped
         bordered
         hover
-        order={['Confirmed', 'desc' ]}
         data={table_data}>
           <MDBTableHead columns={table_data.columns} />
           <MDBTableBody rows={table_data.rows} />
