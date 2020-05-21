@@ -6,9 +6,11 @@ import './TabelGlobal.css'
 
 const TabelGlobal = (props) => {
 
-  const {s_data} = props;
+  const {data} = props;
 
-    let get_data = s_data.map((e,i) => {
+ 
+
+    let get_data = data.map((e,i) => {
       return ({
         id: i+1,
         Country: e.Country,
@@ -22,7 +24,7 @@ const TabelGlobal = (props) => {
     })
 
 
-    const data = {
+    const table_data = {
       columns: [
         {
           label: '#',
@@ -65,6 +67,8 @@ const TabelGlobal = (props) => {
     rows: get_data
     };
 
+
+
   return (
     <Container className="mt-3">
      <Row className="py-3">
@@ -74,9 +78,10 @@ const TabelGlobal = (props) => {
         striped
         bordered
         hover
-        data={data}>
-          <MDBTableHead columns={data.columns} />
-          <MDBTableBody rows={data.rows} />
+        order={['Confirmed', 'desc' ]}
+        data={table_data}>
+          <MDBTableHead columns={table_data.columns} />
+          <MDBTableBody rows={table_data.rows} />
         </MDBDataTable>
           />
           

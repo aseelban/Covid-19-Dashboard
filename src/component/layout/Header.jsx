@@ -36,12 +36,6 @@ class NonFixedNavbarExample extends React.Component {
                   <MDBNavItem>
                     <MDBNavLink activeClassName="_active" to="/news">News</MDBNavLink>
                   </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="#">-</MDBNavLink>
-                  </MDBNavItem>
-                  <MDBNavItem>
-                    <MDBNavLink to="#">-</MDBNavLink>
-                  </MDBNavItem>
                 </MDBNavbarNav>
               </MDBCollapse> 
             </MDBNavbar>

@@ -169,7 +169,7 @@ class Covid extends Component {
                     </MDBRow>
                 </MDBContainer>
                     <GlobalCases cases={global_cases.total_cases} recovered={global_cases.total_recovered} deaths={global_cases.total_deaths} active_cases={global_active_cases} closed_cases={global_closed_cases}/>
-                    <TabelGlobal s_data={global_cases_all_contries} />
+                    <TabelGlobal data={global_cases_all_contries} />
                     {/* <Chart data={global_all_cases_date} changeLengend={this.renderColorfulLegendText}/> */}
                     <Gender gender_data={gender_data}/>
                     <Age data={age_data}/>
