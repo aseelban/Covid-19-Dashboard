@@ -1,0 +1,24 @@
+.age-section {
+    background: #273144;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.title-txt {
+    color: #fff
+}
+
+.source-txt {
+
+    color: #d7d7d7
+}
+
+.gender-txt {
+    color: aquamarine;
+}
+
+
+
+.age-table [data-test="table"] {
+    border-radius: .25rem;
+}

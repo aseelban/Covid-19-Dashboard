@@ -6,77 +6,59 @@ import './TabelGlobal.css'
 
 const TabelGlobal = (props) => {
 
-  const {globalData} = props;
+  const {s_data} = props;
 
-  //* sort global state data
-    globalData.sort((a,b) => {
-      if(a.TotalConfirmed < b.TotalConfirmed){
-        return 1
-      }else {
-        return -1
-      }
-    })
-
-    let get_data = globalData.map((e,i) => {
+    let get_data = s_data.map((e,i) => {
       return ({
         id: i+1,
         Country: e.Country,
-        NewConfirmed: e.NewConfirmed,
-        TotalConfirmed: e.TotalConfirmed,
-        NewRecovered: e.NewRecovered,
+        TotalConfirmed: e.TotalCases,
         TotalRecovered: e.TotalRecovered,
-        NewDeaths: e.NewDeaths,
-        TotalDeaths: e.TotalDeaths
+        TotalDeaths: e.TotalDeaths,
+        Serious_Critical: e.Serious_Critical,
+        ActiveCases: e.ActiveCases,
         
       })
     })
 
-  
-
-
-  
 
     const data = {
       columns: [
         {
           label: '#',
           field: 'id',
-          sort: 'asc'
+          sort: 'asc',
+
         },
         {
-          label: 'Countries',
+          label: 'Country',
           field: 'Country',
           sort: 'asc',
+
         },
         {
-          label: 'New Confirmed',
-          field: 'NewConfirmed',
-          sort: 'asc',
-        },
-        {
-          label: 'Total Confirmed',
+          label: 'Confirmed',
           field: 'TotalConfirmed',
           sort: 'asc',
         },
         {
-          label: 'New recovered',
-          field: 'NewRecovered',
-          sort: 'asc',
-        },
-        {
-          label: 'Total recovered',
+          label: 'Recovered',
           field: 'TotalRecovered',
           sort: 'asc',
         },
         {
-          label: 'New Deaths',
-          field: 'NewDeaths',
+          label: 'Deaths',
+          field: 'TotalDeaths',
           sort: 'asc',
-          width: 100
         },
         {
-          label: 'Total Deaths',
-          field: 'TotalDeaths',
+          label: 'Active Cases',
+          field: 'ActiveCases',
+          sort: 'asc',
+        },
+        {
+          label: 'Serious Critical',
+          field: 'Serious_Critical',
           sort: 'asc',
         }
       ],
@@ -85,11 +67,10 @@ const TabelGlobal = (props) => {
 
   return (
     <Container className="mt-3">
-      <div className="tabel-title"><i class="fas fa-globe i-global" aria-hidden="true"></i>
-      World COVID-19 Stats</div>
      <Row className="py-3">
       <Col md="12">
           <MDBDataTable responsive
+           
         striped
         bordered
         hover

@@ -4,3 +4,8 @@
 .--navbar a {
     color: #d7d7d7;
 }
+._active {
+    background: #c3ffff17 !important;
+    color: #03A9F4 !important;
+    border-bottom: #a2bdca solid 1px !important;
+}

@@ -29,4 +29,10 @@ html, body {
     ; 
 }
 
-/* ! end : total cases based on cuntry */
+
+/* sppiner */
+.spinner-icon {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}

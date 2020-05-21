@@ -12,3 +12,11 @@
     margin-right: 5px;
     color: #3C63A5
 }
+
+
+
+.recharts-wrapper .recharts-y-axis .recharts-linechart-axis-tick text {
+    font-family: sans-serif;
+    fill: black;
+  }
+

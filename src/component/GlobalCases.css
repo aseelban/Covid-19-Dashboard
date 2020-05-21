@@ -34,15 +34,21 @@
     color: var(--font-light-color);
 }
 
-.num-confirmed {
+.c-yle {
     color: yellow
 }
 
-.num-recovered {
+.c-gre {
     color: #43f743
 }
+.c-blu{
+    color: #6bb0ff
+}
+.sec-cr {
+    color: #21f3e0
+}
 
-.num-deaths {
+.c-red {
     color: #ff6565;
 }
 /* ! end : total cases section */

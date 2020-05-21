@@ -1,6 +1,5 @@
 import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon, MDBContainer } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink} from 'mdbreact';
 import './Header.css';
 
 class NonFixedNavbarExample extends React.Component {
@@ -9,10 +8,10 @@ class NonFixedNavbarExample extends React.Component {
     this.state = {
       collapse: false,
     };
-    this.onClick = this.onClick.bind(this);
+    // this.onClick = this.onClick.bind(this);
   }
 
-  onClick() {
+  onClick = () => {
     this.setState({
       collapse: !this.state.collapse,
     });
@@ -22,33 +21,31 @@ class NonFixedNavbarExample extends React.Component {
     const container = { height: 1300 }
     return (
       <div>
-        <Router>
           <header >
-            <MDBNavbar className="--navbar" expand="md">
+            <MDBNavbar  className="--navbar navbar-dark" expand="md">
               <MDBNavbarBrand href="/">
-                <strong>Covid-19 Dashboard</strong>
+                <strong>COVID-19</strong>
               </MDBNavbarBrand>
-              {/* // Disable Collapse - in next features */}
-              {/* <MDBNavbarToggler onClick={this.onClick} />
-              <MDBCollapse isOpen={this.state.collapse} navbar>
+
+              <MDBNavbarToggler className="t0" onClick={this.onClick} />
+              <MDBCollapse className="t1" isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav left>
-                  <MDBNavItem active>
-                    <MDBNavLink to="#">Home</MDBNavLink>
+                  <MDBNavItem>
+                    <MDBNavLink activeClassName="_active" exact  to="/">Dashboard</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Features</MDBNavLink>
+                    <MDBNavLink activeClassName="_active" to="/news">News</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Pricing</MDBNavLink>
+                    <MDBNavLink to="#">-</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to="#">Opinions</MDBNavLink>
+                    <MDBNavLink to="#">-</MDBNavLink>
                   </MDBNavItem>
                 </MDBNavbarNav>
-              </MDBCollapse> */}
+              </MDBCollapse> 
             </MDBNavbar>
           </header>
-        </Router>
       </div>
     );
   }

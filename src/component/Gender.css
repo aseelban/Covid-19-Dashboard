@@ -1,0 +1,33 @@
+.age-section {
+    background: #273144;
+    border-radius: 5px;
+    padding: 2em;
+}
+
+.title-txt {
+    color: #fff
+}
+
+.source-txt {
+
+    color: #d7d7d7
+}
+
+.rate-txt {
+    color: #d7d7d7;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.rate-value {
+    color: rgb(207, 47, 47);
+}
+
+.gender-txt {
+    color: aquamarine;
+}
+
+
+.gender-table [data-test="table"] {
+    border-radius: .25rem;
+}
