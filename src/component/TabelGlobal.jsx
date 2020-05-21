@@ -8,80 +8,80 @@ const TabelGlobal = (props) => {
 
   const {data} = props;
 
- 
+ // for(var i = 1; i < data.length; i++){
+  //   console.log(i)
+  // }
+  
+  let e;
 
-    let get_data = data.map((e,i) => {
+
+    var func = data.map((e,i) => {
       return ({
         id: i,
-        country: e.Country,
-        confirmed: e.TotalCases,
-        recovered: e.TotalRecovered,
-        deaths: e.TotalDeaths,
-        seriousCritical: e.Serious_Critical,
-        activeCases: e.ActiveCases,
-        
+        Country: e.Country,
+        TotalConfirmed: e.TotalCases,
+        TotalRecovered: e.TotalRecovered,
+        TotalDeaths: e.TotalDeaths,
       })
     })
 
+  
 
-    const table_data = {
-      columns: [
-        {
-          label: '#',
-          field: 'id',
-          sort: 'asc',
 
-        },
-        {
-          label: 'Country',
-          field: 'country',
-          sort: 'asc',
+  
 
-        },
-        {
-          label: 'Total Confirmed',
-          field: 'confirmed',
-          sort: 'asc',
-        },
-        {
-          label: 'Total Recovered',
-          field: 'recovered',
-          sort: 'asc',
-        },
-        {
-          label: 'Total Deaths',
-          field: 'deaths',
-          sort: 'asc',
-        },
-        {
-          label: 'Active Cases',
-          field: 'activeCases',
-          sort: 'asc',
-        },
-        {
-          label: 'Serious Critical',
-          field: 'seriousCritical',
-          sort: 'asc',
-        }
-      ],
-    rows: get_data
-    };
-
+  const table_data = {
+    columns: [
+      {
+        label: '#',
+        field: 'id',
+        sort: 'asc'
+      },
+      {
+        label: 'Countries',
+        field: 'Country',
+        sort: 'asc',
+        width: 150
+      },
+      {
+        label: 'Total Confirmed',
+        field: 'TotalConfirmed',
+        sort: 'asc',
+        width: 270
+      },
+      {
+        label: 'Total recovered',
+        field: 'TotalRecovered',
+        sort: 'asc',
+        width: 200
+      },
+      {
+        label: 'Total Deaths',
+        field: 'TotalDeaths',
+        sort: 'asc',
+        width: 100
+      },
+    ],
+    rows: func
+  };
 
   return (
     <Container className="mt-3">
      <Row className="py-3">
       <Col md="12">
-        <MDBDataTable responsive
-        striped
-        bordered
-        hover
-        data={table_data}>
-        </MDBDataTable>
+          <MDBDataTable
+            striped
+            bordered
+            hover
+            data={table_data}
           />
-          
       </Col>
     </Row> 
+    {/* <ul>
+      {data.map((e) => {
+        return <li>{e.Country}</li>
+      })}
+    </ul> */}
   </Container>
   );
 }
