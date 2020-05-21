@@ -25,7 +25,7 @@ class News extends Component {
     getNews = async () => {
         
         try {
-            let url = `http://newsapi.org/v2/everything?q=Covid&from=2020-05-06&sortBy=popularity&apiKey=fa9601f1b1894156bee8904f361189cd`
+            let url = `https://newsapi.org/v2/everything?q=Covid&from=2020-05-06&sortBy=popularity&apiKey=fa9601f1b1894156bee8904f361189cd`
             let req = await axios.get(url)
             let res = req.data.articles;
     
