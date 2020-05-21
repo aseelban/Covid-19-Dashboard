@@ -12,13 +12,13 @@ const TabelGlobal = (props) => {
 
     let get_data = data.map((e,i) => {
       return ({
-        id: i+1,
-        Country: e.Country,
-        Confirmed: e.TotalCases,
-        Recovered: e.TotalRecovered,
-        Deaths: e.TotalDeaths,
-        Serious_Critical: e.Serious_Critical,
-        Active_Cases: e.ActiveCases,
+        id: i,
+        country: e.Country,
+        confirmed: e.TotalCases,
+        recovered: e.TotalRecovered,
+        deaths: e.TotalDeaths,
+        seriousCritical: e.Serious_Critical,
+        activeCases: e.ActiveCases,
         
       })
     })
@@ -34,33 +34,33 @@ const TabelGlobal = (props) => {
         },
         {
           label: 'Country',
-          field: 'Country',
+          field: 'country',
           sort: 'asc',
 
         },
         {
-          label: 'Confirmed',
-          field: 'Confirmed',
+          label: 'Total Confirmed',
+          field: 'confirmed',
           sort: 'asc',
         },
         {
-          label: 'Recovered',
-          field: 'Recovered',
+          label: 'Total Recovered',
+          field: 'recovered',
           sort: 'asc',
         },
         {
-          label: 'Deaths',
-          field: 'Deaths',
+          label: 'Total Deaths',
+          field: 'deaths',
           sort: 'asc',
         },
         {
-          label: 'Active_Cases',
-          field: 'Active_Cases',
+          label: 'Active Cases',
+          field: 'activeCases',
           sort: 'asc',
         },
         {
-          label: 'Serious_Critical',
-          field: 'Serious_Critical',
+          label: 'Serious Critical',
+          field: 'seriousCritical',
           sort: 'asc',
         }
       ],
@@ -72,14 +72,11 @@ const TabelGlobal = (props) => {
     <Container className="mt-3">
      <Row className="py-3">
       <Col md="12">
-          <MDBDataTable responsive
-           
+        <MDBDataTable responsive
         striped
         bordered
         hover
         data={table_data}>
-          <MDBTableHead columns={table_data.columns} />
-          <MDBTableBody rows={table_data.rows} />
         </MDBDataTable>
           />
           
