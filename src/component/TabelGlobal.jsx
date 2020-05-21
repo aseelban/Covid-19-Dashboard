@@ -14,11 +14,11 @@ const TabelGlobal = (props) => {
       return ({
         id: i+1,
         Country: e.Country,
-        TotalConfirmed: e.TotalCases,
-        TotalRecovered: e.TotalRecovered,
-        TotalDeaths: e.TotalDeaths,
+        Confirmed: e.TotalCases,
+        Recovered: e.TotalRecovered,
+        Deaths: e.TotalDeaths,
         Serious_Critical: e.Serious_Critical,
-        ActiveCases: e.ActiveCases,
+        Active_Cases: e.ActiveCases,
         
       })
     })
@@ -40,26 +40,26 @@ const TabelGlobal = (props) => {
         },
         {
           label: 'Confirmed',
-          field: 'TotalConfirmed',
+          field: 'Confirmed',
           sort: 'asc',
         },
         {
           label: 'Recovered',
-          field: 'TotalRecovered',
+          field: 'Recovered',
           sort: 'asc',
         },
         {
           label: 'Deaths',
-          field: 'TotalDeaths',
+          field: 'Deaths',
           sort: 'asc',
         },
         {
-          label: 'Active Cases',
-          field: 'ActiveCases',
+          label: 'Active_Cases',
+          field: 'Active_Cases',
           sort: 'asc',
         },
         {
-          label: 'Serious Critical',
+          label: 'Serious_Critical',
           field: 'Serious_Critical',
           sort: 'asc',
         }
@@ -86,9 +86,7 @@ const TabelGlobal = (props) => {
         striped
         bordered
         hover
-        // order={['Confirmed', 'desc' ]}
-        sorting={false}
-
+        order={['Confirmed', 'desc' ]}
         data={table_data}>
           <MDBTableHead columns={table_data.columns} />
           <MDBTableBody rows={table_data.rows} />
