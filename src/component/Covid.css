@@ -2,12 +2,12 @@
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
 
-
-html, body {
+body {
     background-color: #15202B;
     font-family: 'Baloo Paaji 2', cursive;
-    max-width: 100%;
-    overflow-x: hidden;
+
+    height: 100%;
+
 }
 
 
@@ -25,7 +25,7 @@ html, body {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 0;
-    background: #273144
+    background: #15202B
     ; 
 }
 
