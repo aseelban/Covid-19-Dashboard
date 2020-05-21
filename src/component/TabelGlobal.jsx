@@ -67,15 +67,6 @@ const TabelGlobal = (props) => {
     rows: get_data
     };
 
-      //  //* sort global state data
-       data.sort((a,b) => {
-        if(a.TotalConfirmed > b.TotalConfirmed){
-          return 1
-        }else {
-          return -1
-        }
-      })
-
 
   return (
     <Container className="mt-3">
