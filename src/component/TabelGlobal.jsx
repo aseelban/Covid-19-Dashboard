@@ -11,21 +11,34 @@ const TabelGlobal = (props) => {
   const {data} = props;
 
  
-  
-  const convert = (number) => {
+  // const convert = (number) => {
     
-    return <NumberFormat value={number} displayType={'text'} thousandSeparator={true} />
-  }
+  //   return <NumberFormat value={number} displayType={'text'} thousandSeparator={true} />
+  // }
+
+  //   let get_data = data.map((e) => {
+  //     return ({
+  //       id: convert(e["#"]),
+  //       country: e.Country,
+  //       confirmed: convert(e.TotalCases),
+  //       recovered: convert(e.TotalRecovered),
+  //       deaths: convert(e.TotalRecovered),
+  //       seriousCritical: convert(e.Serious_Critical),
+  //       activeCases: convert(e.ActiveCases),
+        
+  //     })
+  //   })
+
+
+
+
+
 
     let get_data = data.map((e) => {
       return ({
-        id: convert(e["#"]),
-        country: e.Country,
-        confirmed: convert(e.TotalCases),
-        recovered: convert(e.TotalRecovered),
-        deaths: convert(e.TotalRecovered),
-        seriousCritical: convert(e.Serious_Critical),
-        activeCases: convert(e.ActiveCases),
+
+        confirmed: e.TotalCases,
+
         
       })
     })
@@ -33,44 +46,10 @@ const TabelGlobal = (props) => {
 
     const table_data = {
       columns: [
-        {
-          label: '#',
-          field: 'id',
-          sort: 'asc',
-          attributes: {
-            'aria-controls': 'DataTable',
-            'aria-label': 'id',
-          },
-        },
-        {
-          label: 'Country',
-          field: 'country',
-          sort: 'asc',
 
-        },
         {
           label: 'Total Confirmed',
           field: 'confirmed',
-          sort: 'asc',
-        },
-        {
-          label: 'Total Recovered',
-          field: 'recovered',
-          sort: 'asc',
-        },
-        {
-          label: 'Total Deaths',
-          field: 'deaths',
-          sort: 'asc',
-        },
-        {
-          label: 'Serious Critical',
-          field: 'seriousCritical',
-          sort: 'asc',
-        },
-        {
-          label: 'Active Cases',
-          field: 'activeCases',
           sort: 'asc',
         },
       ],
